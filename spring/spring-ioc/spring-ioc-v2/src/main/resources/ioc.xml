@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans id="aservice" class ="info.bonian.">
+    <property type = "String" name="property1" value="Hello World!"></property>
+</beans>

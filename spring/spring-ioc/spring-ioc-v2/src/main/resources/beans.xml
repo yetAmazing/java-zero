@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans>
+    <bean id="aService" class="info.bonian.test.AServiceImpl">
+        <constructor-arg type="String" name="name" value="abc"/>
+        <constructor-arg type="int" name="level" value="3"/>
+        <property type="String" name="property1" value="Someone says"/>
+        <property type="String" name="property2" value="Hello World!"/>
+        <property type="info.bonian.test.BService" name="ref1" ref="bService"/>
+    </bean>
+    <bean id="bService" class="info.bonian.test.BService">
+        <property type="info.bonian.test.CService" name="bbs" ref="cService" />
+    </bean>cService
+    <bean id="cService" class="info.bonian.test.CService">
+        <property type="info.bonian.test.AServiceImpl" name="as" ref="aService" />
+    </bean>
+</beans>
